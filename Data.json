@@ -1,0 +1,49 @@
+{
+  "pure": {
+    "defination": "Pure substances are made up of only single entity and cannot be further broken down into simpler entities",
+    "elements":{
+      "defination": " Elements constitute the simplest chemical substances in which all the atoms are exactly the same.",
+      "example": ["Iron [Fe]", "Gold [Au]"]
+    },
+    "compounds":{
+      "defination": " Compounds are chemical substances made up of two or more elements that are chemically bound together in a fixed ratio.",
+      "examples": ["Water [H2O]", "Alcohol [C2H6O]"]
+    }
+  },
+  "mixture": {
+    "defination": "Mixtures are formed by just mixing two or more pure substances (components) such that each substance retains its own chemical identity.", 
+    "heterogeneous":{
+      "defination":"A mixture which contains physically distinct parts and has a non-uniform composition is called a heterogeneous mixture.",
+      "colloids": {
+        "defination": "A colloidal solution is a mixture in which the substances are regularly suspended in a fluid.",
+        "Tyndall effect": true, 
+        "examples": ["liquid aerosol"],
+        "classified into":{
+          "Foam": "A colloidal solution with dispersed phase gas and dispersing medium solid/liquid is called Foam.",
+          "Emulsion": "A colloidal solution with dispersed phase liquid and dispersing medium liquid is called Emulsion.",
+          "Sol":"A colloidal solution with dispersed phase solid and dispersing medium liquid is called Sol."
+        }
+      },
+      "suspension":{
+        "defination":"A suspension is a heterogeneous mixture in which the solute particles do not dissolve but remain suspended throughoutxsxs. xxxxxsesexxxss the bulk of the medium.",
+        "Tyndall effect": true,
+        "properties": ["The solute particles settle down when a suspension is left undisturbed.",
+        "They can be separated from the mixture by filtration."],
+        "examples": ["mixture of chalk and water" , "muddy water"]
+      }
+    },
+    "homogeneous": {
+      "defination":  "A mixture which has a uniform composition throughout is called a homogeneous mixture or solution.",
+      "solutions":{
+        "defination":"A solution is a homogeneous of two or more substances.",
+        "Tyndall effect": false,
+        "properties" : ["Its particles are too tiny and have a diameter less than 1 nm.",
+        "The particles are not visible to naked eyes.",
+        "Particles do not scatter a beam of light passing through it and hence do not show the Tyndall effect.",
+        "The solute particles never settle down on keeping undisturbed.",
+        "The components of a solution cannot be separated using filtration."],
+        "examples": ["solution of sugar and water", "sand and salt"]
+      }
+    }
+  }
+}
