@@ -1,39 +1,57 @@
 //CODING CHALLENGES
-const p = document.getElementById('p')
-const sup = document.getElementById('sup')
+const p = document.getElementById('out')
 //adds two numbers
 function startFunc() {
   let num1 = parseFloat(prompt("first number"))
   let num2 = parseFloat(prompt("second number"))
-
   alert(num1 + num2)
 }
 //prints odd and even numbers upto 100 and puts them in the arrays accordingly
 
-let obj = {
-  odd: [],
-  even: []
-}
-let i
-let x = 0
-for (i = 1; i < 100; i += 2) {
-  obj.odd.push(i)
-}
-for (x = 0; x < 100; x += 2) {
-  obj.even.push(x)
-}
-console.log(obj)
+// let obj = {
+//   odd: [],
+//   even: []
+// }
+// let i
+// let x = 0
+// for (i = 1; i < 100; i += 2) {
+//   obj.odd.push(i)
+// }
+// for (x = 0; x < 100; x += 2) {
+//   obj.even.push(x)
+// }
+// console.log(obj)
 
-// table of 7 
+// // table of 7 
 
-let m
-let obje = {
-  array: []
-}
-for (m = 7; m <= 70; m += 7) {
-  obje.array.push(m)
-}
-console.log(obje)
+// let m
+// let obje = {
+//   array: []
+// }
+// for (m = 7; m <= 70; m += 7) {
+//   obje.array.push(m)
+// }
+// console.log(obje)
+// let arr = [{
+//     "apple": 20,
+//     "grapes": 10,
+//     "banana": 40,
+//     "orange": null
+// }
+// ]
+
+// let array = {
+//   ar1: ["apple", "banana", "orange"],
+//   ar2: [20, 40, null]
+// }
+
+// console.log(arr)
+// console.log(array)
+
+// array.ar1.push(...array.ar2)
+// console.log(array)
+
+
 
 //conversion of celcius to Fahrenheit
 function convertCelcius(val) {
@@ -48,39 +66,11 @@ function convertFahrenheit(value) {
 
 
 
-let arr = [{
-    "apple": 20,
-    "grapes": 10,
-    "banana": 40,
-    "orange": null
-}
-]
-
-let array = {
-  ar1: ["apple", "banana", "orange"],
-  ar2: [20, 40, null]
-}
-
-console.log(arr)
-console.log(array)
-
-array.ar1.push(...array.ar2)
-console.log(array)
-
-
-
-class Car {
-  constructor(name, color, engine, maxSpeed, in_market) {
-    this.name = name
-    this.color = color
-    this.engine = engine
-    this.maxSpeed = maxSpeed
-    this.in_market = in_market
+function ishundread(a, b) {
+  if (a === 100 || b === 100 || a + b === 100) {
+    return
   }
 }
-
-let car = new Car("ford", "Black", "V8", 200, true)
-console.info(car)
 
 function readTextFile(file, callback) {
   var rawFile = new XMLHttpRequest();
@@ -133,13 +123,13 @@ function Pythagoras(a, b) {
   let sum = a * a + b * b
   let c = Math.sqrt(sum)
   return c + " is C²"
-  /*console.log("C² is "+ c +" the full triplets are "+ a , b , c)*/
+  //("C² is "+ c +" the full triplets are "+ a , b , c)
 }
 
 function start() {
   let a = prompt("declare a²")
   let b = prompt("declare b²")
-  alert(Pythagoras(a, b))
+  p.innerHTML = Pythagoras(a, b)
 }
 
 function circumference(r) {
@@ -175,39 +165,6 @@ function generateRandom(Array) {
   return Array[random]
 }
 
-let arr2 = [2020, 919292, 01]
-console.log(generateRandom(arr2))
-
-function map() {
-  let map = {
-    "Andhra Pradesh": "Amaravati",
-    "Arunachal Pradesh": "Itanagar",
-    "Assam": "Dispur",
-    "Bihar": "Patna",
-    "Chattisgarh": "Raipur",
-    "Goa": "Panaji",
-    "Gujrat": "Gandhinagar",
-    "Hariyana": "chandigarh",
-    "Himachal Pradesh": "Shimla",
-    "Jarkhand": "Ranchi",
-    "Karnataka": "Bangluru",
-    "Kerala": "Thiruvananthapuram",
-    "Madhya Pradesh": "Bhopal",
-    "Maharashtra": "Mumbai",
-    "Manipur": "Imphal",
-    "Meghalaya": "Shillong",
-    "Mizoram": "Aizwal",
-    "Nagaland": "kohima",
-    "Odisha": "Bhuvneshwar",
-    "Punjab": "chandigarh",
-    "rajasthan": "Jaipur",
-    "Skikkim": "Gangtok",
-    "Tamil Nadu": "chennai",
-    "Telangana": "Hyderabad",
-    "Tripura": "Agartala",
-    "Uttar Pradesh": "Lucknow",
-    "Uttrakhand": "Dehradun",
-    "West Bengal": "Kolkata"
-  }
-  console.table(map)
+function diffArray(targetArray, victimArray) {
+  return targetArray.concat(victimArray).filter(item => !targetArray.includes(item))
 }
