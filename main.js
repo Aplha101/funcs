@@ -168,3 +168,17 @@ function generateRandom(Array) {
 function diffArray(targetArray, victimArray) {
   return targetArray.concat(victimArray).filter(item => !targetArray.includes(item))
 }
+
+
+function herons(a , b , c){
+  let S = (a + b + c)/2
+  let area = Math.sqrt(S * (S-a)* (S-b) * (S-c))
+  return area + "cm²"
+}
+
+function Herons(){
+  let a = parseFloat(prompt("a"))
+  let b = parseFloat(prompt("b"))
+  let c = parseFloat(prompt("c"))
+  console.log(herons(a , b, c))
+}
