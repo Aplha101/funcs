@@ -30,7 +30,7 @@ function startFunc() {
 // }
 // for (m = 7; m <= 70; m += 7) {
 //   obje.array.push(m)
-// }
+// } 
 // console.log(obje)
 // let arr = [{
 //     "apple": 20,
@@ -181,4 +181,32 @@ function Herons(){
   let b = parseFloat(prompt("b"))
   let c = parseFloat(prompt("c"))
   console.log(herons(a , b, c))
+}
+
+let formulas = {
+  SA: {
+    TSA: {
+    cube : (a) => {let sa = 6 * Math.pow(a , 2); return `${sa} unit²`},
+    cuboid : (l , b , h) => { let sa = 2 * (l*b + b*h + l*h); return `${sa} unit²`},
+    cylinder: (r , h) => {let sa = 2 * Math.PI * r * (r + h); return `${sa} unit²`},
+      cone : (r , h) => {let sa = Math.PI * r * ( r + h); return `${sa} unit²`},
+    sphere: (r) => {let sa = 4 * Math.PI * Math.pow(r , 2); return `${sa} unit²`},
+    hemisphere: (r) => {let sa = 3 * Math.PI * pow(r , 2); return `${sa} unit²`}
+    }, 
+    CSA : {
+      cube: (a) => {let sa = 4 * Math.pow(a , 2); return `${sa} unit²`},
+      cuboid: ( l ,b ,h) => {let sa = 2 * h * ( l + b); return `${sa} unit²`},
+      cylinder: (r , h) => {let sa = 2 * Math.PI * r * h; return `${sa} unit²`},
+      cone : (r , l ) => {let sa = Math.PI * r * l; return `${sa} unit²`},
+      hemisphere: (r) => {let sa = 2 * Math.PI * Math.pow(r , 2)}
+    }
+  },
+  Vol:{
+    cube: (a) => {let vol = Math.pow(a , 3);return `${vol} unit³`},
+    cuboid : (l , b ,h ) => {let vol = l * b * h;return `${vol} unit³`},
+    cylinder:(r , h) =>{let vol = Math.PI * Math.pow(r,2)*h;return `${vol} unit³`},
+    cone:(r,h) => {let vol = 1/3 * Math.PI * Math.pow(r,2) * h;return `${vol} unit³`},
+    sphere:(r) =>{let vol = 4/3 * Math.PI * Math.pow(r,3);return `${vol} unit³`},
+    hemisphere: (r) =>{let vol = 2/3 * Math.PI * Math.pow(r,3);return `${vol} unit³`}
+  }
 }
