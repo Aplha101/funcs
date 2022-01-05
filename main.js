@@ -170,43 +170,55 @@ function diffArray(targetArray, victimArray) {
 }
 
 
-function herons(a , b , c){
-  let S = (a + b + c)/2
-  let area = Math.sqrt(S * (S-a)* (S-b) * (S-c))
+function herons(a, b, c) {
+  let S = (a + b + c) / 2
+  let area = Math.sqrt(S * (S - a) * (S - b) * (S - c))
   return area + "cm²"
 }
 
-function Herons(){
+function Herons() {
   let a = parseFloat(prompt("a"))
   let b = parseFloat(prompt("b"))
   let c = parseFloat(prompt("c"))
-  console.log(herons(a , b, c))
+  console.log(herons(a, b, c))
 }
 
 let formulas = {
   SA: {
     TSA: {
-    cube : (a) => {let sa = 6 * Math.pow(a , 2); return `${sa} unit²`},
-    cuboid : (l , b , h) => { let sa = 2 * (l*b + b*h + l*h); return `${sa} unit²`},
-    cylinder: (r , h) => {let sa = 2 * Math.PI * r * (r + h); return `${sa} unit²`},
-      cone : (r , h) => {let sa = Math.PI * r * ( r + h); return `${sa} unit²`},
-    sphere: (r) => {let sa = 4 * Math.PI * Math.pow(r , 2); return `${sa} unit²`},
-    hemisphere: (r) => {let sa = 3 * Math.PI * pow(r , 2); return `${sa} unit²`}
-    }, 
-    CSA : {
-      cube: (a) => {let sa = 4 * Math.pow(a , 2); return `${sa} unit²`},
-      cuboid: ( l ,b ,h) => {let sa = 2 * h * ( l + b); return `${sa} unit²`},
-      cylinder: (r , h) => {let sa = 2 * Math.PI * r * h; return `${sa} unit²`},
-      cone : (r , l ) => {let sa = Math.PI * r * l; return `${sa} unit²`},
-      hemisphere: (r) => {let sa = 2 * Math.PI * Math.pow(r , 2)}
+      cube: (a) => { let sa = 6 * Math.pow(a, 2); return `${sa}_unit²` },
+      cuboid: (l, b, h) => { let sa = 2 * (l * b + b * h + l * h); return `${sa}_unit²` },
+      cylinder: (r, h) => { let sa = 2 * Math.PI * r * (r + h); return `${sa}_unit²` },
+      cone: (r, h) => { let sa = Math.PI * r * (r + h); return `${sa}_unit²` },
+      sphere: (r) => { let sa = 4 * Math.PI * Math.pow(r, 2); return `${sa}_unit²` },
+      hemisphere: (r) => { let sa = 3 * Math.PI * pow(r, 2); return `${sa}_unit²` }
+    },
+    CSA: {
+      cube: (a) => { let sa = 4 * Math.pow(a, 2); return `${sa}_unit²` },
+      cuboid: (l, b, h) => { let sa = 2 * h * (l + b); return `${sa}_unit²` },
+      cylinder: (r, h) => { let sa = 2 * Math.PI * r * h; return `${sa}_unit²` },
+      cone: (r, l) => { let sa = Math.PI * r * l; return `${sa}_unit²` },
+      hemisphere: (r) => { let sa = 2 * Math.PI * Math.pow(r, 2) }
     }
   },
-  Vol:{
-    cube: (a) => {let vol = Math.pow(a , 3);return `${vol} unit³`},
-    cuboid : (l , b ,h ) => {let vol = l * b * h;return `${vol} unit³`},
-    cylinder:(r , h) =>{let vol = Math.PI * Math.pow(r,2)*h;return `${vol} unit³`},
-    cone:(r,h) => {let vol = 1/3 * Math.PI * Math.pow(r,2) * h;return `${vol} unit³`},
-    sphere:(r) =>{let vol = 4/3 * Math.PI * Math.pow(r,3);return `${vol} unit³`},
-    hemisphere: (r) =>{let vol = 2/3 * Math.PI * Math.pow(r,3);return `${vol} unit³`}
+  Vol: {
+    cube: (a) => { let vol = Math.pow(a, 3); return `${vol}_unit³` },
+    cuboid: (l, b, h) => { let vol = l * b * h; return `${vol}_unit³` },
+    cylinder: (r, h) => { let vol = Math.PI * Math.pow(r, 2) * h; return `${vol}_unit³` },
+    cone: (r, h) => { let vol = 1 / 3 * Math.PI * Math.pow(r, 2) * h; return `${vol}_unit³` },
+    sphere: (r) => { let vol = 4 / 3 * Math.PI * Math.pow(r, 3); return `${vol}_unit³` },
+    hemisphere: (r) => { let vol = 2 / 3 * Math.PI * Math.pow(r, 3); return `${vol}_unit³` }
+  }
+}
+
+function splitLast(arg) {
+  if (arg.includes(".") && arg.includes("_")) {
+    return parseFloat(arg.split("_").shift())
+  }
+  else if (arg.includes(".") != true && arg.includes("_")) {
+    return parseInt(arg.split("_").shift())
+  }
+  else {
+    throw "Arguments passed does not contain the valid result characters or isnt a required Datatype for thefunction"
   }
 }
